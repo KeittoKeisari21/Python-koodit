@@ -1,8 +1,16 @@
-def muunna(gal):
+def muunna(galloonat):
+    return galloonat * 3.785
+
+def main():
     while True:
-        gl = float(input("Anna galloonat: "))
-        l = gl * 3.785
-        print("Litroina: ",l)
+        try:
+            galloonat = float(input("Anna galloonat: "))
+            if galloonat < 0:
+                break
+            litra = muunna(galloonat)
+            print("Tämä on", litra, "litraa")
+        except ValueError:
+            print("Naa bro")
 
-
-muunna(gal)
+if __name__ == '__main__':
+    main()
